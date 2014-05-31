@@ -19,15 +19,15 @@
 #    - pre
 #    - conf
 #
-#- name: Install virtualenv
-#  hosts: web
-#  sudo: true
-#  roles:
-#    - virtualenv
-#  tags:
-#    - python
-#    - virtualenv
-#
+- name: Install virtualenv
+  hosts: web
+  sudo: true
+  roles:
+    - brad.virtualenv
+  tags:
+    - python
+    - virtualenv
+
 #- name: Install Postgres
 #  hosts: db
 #  sudo: true
