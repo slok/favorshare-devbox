@@ -1,0 +1,14 @@
+# We know this from the Vagrantfile, but we could do dynamically
+devbox.favorshare.org ansible_ssh_host=192.168.100.50
+
+[web]
+devbox.favorshare.org
+
+[db]
+devbox.favorshare.org
+
+
+# Our env group is local
+[local:children]
+web
+db
