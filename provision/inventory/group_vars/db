@@ -1,0 +1,5 @@
+# Postgresql role settings (https://galaxy.ansible.com/list#/roles/512)
+postgresql_databases: 
+  - {'name': "favorshare"}
+
+

@@ -28,11 +28,11 @@
     - python
     - virtualenv
 
-#- name: Install Postgres
-#  hosts: db
-#  sudo: true
-#  roles:
-#    - postgresql
-#  tags:
-#    - db
-#    - postgresql
+- name: Install Postgres
+  hosts: db
+  sudo: true
+  roles:
+    - Ansibles.postgresql
+  tags:
+    - db
+    - postgresql
