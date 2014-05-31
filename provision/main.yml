@@ -1,0 +1,38 @@
+---
+
+
+- name: Common tasks in all servers
+  hosts: all
+  sudo: true
+  roles:
+    - common
+  tags:
+    - pre
+    - common
+
+#- name: Common configuration in all servers
+#  hosts: all
+#  sudo: true
+#  roles:
+#    - configuration
+#  tags:
+#    - pre
+#    - conf
+#
+#- name: Install virtualenv
+#  hosts: web
+#  sudo: true
+#  roles:
+#    - virtualenv
+#  tags:
+#    - python
+#    - virtualenv
+#
+#- name: Install Postgres
+#  hosts: db
+#  sudo: true
+#  roles:
+#    - postgresql
+#  tags:
+#    - db
+#    - postgresql
