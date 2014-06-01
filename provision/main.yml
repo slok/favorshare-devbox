@@ -10,15 +10,6 @@
     - pre
     - common
 
-#- name: Common configuration in all servers
-#  hosts: all
-#  sudo: true
-#  roles:
-#    - configuration
-#  tags:
-#    - pre
-#    - conf
-#
 - name: Install virtualenv
   hosts: web
   sudo: true
@@ -27,6 +18,15 @@
   tags:
     - python
     - virtualenv
+
+- name: Install virtualenvwrapper
+  hosts: web
+  sudo: true
+  roles:
+    - virtualenvwrapper
+  tags:
+    - python
+    - virtualenvwrapper
 
 - name: Install Postgres
   hosts: db

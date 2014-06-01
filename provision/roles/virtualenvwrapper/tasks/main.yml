@@ -1,0 +1,13 @@
+---
+
+
+- name: Install virtualenvwrapper
+  pip: name=virtualenvwrapper
+
+- name: Add virtualenvwrapper to bashrc
+  lineinfile:
+    dest: "{{ item.0.location }}"
+    line: "{{ item.1 }}"
+  with_subelements:
+    - virtualenvwrapper_configuration
+    - config
