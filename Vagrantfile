@@ -35,4 +35,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       "--ioapic", "on",
     ]
   end
+
+  # Provision
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "provisioning/main.yml"
+    ansible.inventory_path = "provisioning/inventory"
+    ansible.verbose = "v"
+
+    # Check this https://github.com/mitchellh/vagrant/issues/3096
+    ansible.limit = 'local'
+  end
+
 end
