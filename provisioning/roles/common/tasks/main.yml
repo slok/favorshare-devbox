@@ -16,3 +16,4 @@
     - python-dev
     - python
     - python-pip
+    - libpq-dev
